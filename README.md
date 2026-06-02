@@ -33,3 +33,5 @@ uv run main.py
 >Since the model is a doll is unrealistic head morphology, the result might look a bit weird, but hopefully will illustrate that the transformations have occurred.
 
 4. If you inspect the `main.py` script, you'll see that the `coregister_montage` function (the one wrapping every other function) returns an object `rec_adj`. This is the original recording with the adjusted montage. Further preprocessing steps (e.g., chromophore concentration calculation) should take the new source-detector distances into account.
+
+![Original and photogrammetry-adjusted montage](/adjusted-montage.png)
