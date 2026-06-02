@@ -21,7 +21,15 @@ uv sync
 uv run main.py
 ```
 
-1. First, you will need to manually select any stickers that Cedalion's functions have not automatically found, either because of color differences (e.g., shades in the scanc change color) or because of scan quality (some optodes are difficult to scan, especially thos ein more posterior locations). Red dots should sit in the middle of the yellow stickers on top of each optode. Remove red dots or place new ones by right clicking on them. Once happy with the result, close the window.
-2. Second, you will need to indicate some anatomical landmarks: Nz, Cz, LPA, RPA. As before, right click to place the landmarks. Right click on an existing change then label. Please, set the labels in the indicated order (I noticed some unexpected behaviour when selecting the labels in a different order). If landmark labels are not visible, try zooming in.
-3. After some calculations, a plot is generated, comparing the original and the photogrametry-adjusted montages. Since the model is a doll is unrealistic head morphology, the result might look a bit weird, but hopefully will illustrate that the transformations have occurred.
+1. First, you will need to **manually select any stickers** that Cedalion's functions have not automatically found, either because of color differences (e.g., shades in scan modify colors) or because of scan quality (some optodes are difficult to scan, specially thos in more posterior locations). Red dots should sit in the middle of the yellow stickers, on top of each optode. Remove red dots or place new ones by right clicking on them. Once happy with the result, close the window.
+2. Second, you will need to **indicate some anatomical landmarks**: *Nz*, *Cz*, *LPA*, *RPA*. As before, right click to place the landmarks. Right click on an existing change then label.
+
+> [!TIP]
+>Please, set the labels in the indicated order (I noticed some unexpected behaviour when selecting the labels in a different order). If landmark labels are not visible, try zooming in.
+
+3. After some calculations, a plot is generated, comparing the original and the photogrametry-adjusted montages.
+
+> [!WARNING]
+>Since the model is a doll is unrealistic head morphology, the result might look a bit weird, but hopefully will illustrate that the transformations have occurred.
+
 4. If you inspect the `main.py` script, you'll see that the `coregister_montage` function (the one wrapping every other function) returns an object `rec_adj`. This is the original recording with the adjusted montage. Further preprocessing steps (e.g., chromophore concentration calculation) should take the new source-detector distances into account.
