@@ -1,0 +1,12 @@
+[project]
+name = "photogrammetry-test"
+version = "0.1.0"
+description = "An attempt to spatially reigster an fNIRS montage using the photrogrammetry routine in Cedalion v26.5.1"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cedalion>=26.5.1",
+]
+
+[tool.uv.sources]
+cedalion = { git = "https://github.com/ibs-lab/cedalion", rev = "dev" }
